@@ -6,31 +6,31 @@ let board = [
 
 let counter = 0;
 
-
+$(document).ready(function () {
 const isWin = function () {
   if (board[0] === board[1] && board[1] === board[2] && board[0] !== "") {
-    console.log('You won!');
+    $(".gameOver").attr('id','gameOverShow')
   }
   if (board[3] === board[4] && board[4] === board[5] && board[3] !== "") {
-    console.log('You won!');
+    $(".gameOver").attr('id','gameOverShow')
   }
   if (board[6] === board[7] && board[7] === board[8] && board[6] !== "") {
-    console.log('You won!');
+    $(".gameOver").attr('id','gameOverShow')
   }
   if (board[0] === board[3] && board[3] === board[6] && board[0] !== "") {
-    console.log('You won!');
+    $(".gameOver").attr('id','gameOverShow')
   }
   if (board[1] === board[4] && board[4] === board[7] && board[1] !== "") {
-    console.log('You won!');
+  $(".gameOver").attr('id','gameOverShow')
   }
   if (board[2] === board[5] && board[5] === board[8] && board[2] !== "") {
-    console.log('You won!');
+    $(".gameOver").attr('id','gameOverShow')
   }
   if (board[0] === board[4] && board[4] === board[8] && board[0] !== "") {
-    console.log('You won!');
+    $(".gameOver").attr('id','gameOverShow')
   }
   if (board[6] === board[4] && board[4] === board[2] && board[6] !== "") {
-    console.log('You won!');
+    $(".gameOver").attr('id','gameOverShow')
   }
 }
 
@@ -63,7 +63,6 @@ const placePic = function (num) {
   }
 }
 
-$(document).ready(function () {
   $("#box0").on('click', function () {
     placeMarker(0);
     placePic(0);
