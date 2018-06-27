@@ -22,10 +22,16 @@ body {
   top: 372px;
 }
 
+.draw {
+  visibility: hidden;
+  position: absolute;
+  right: 510px;
+  top: 372px;
+}
 #gameOverShow {
   visibility: visible;
   position: absolute;
-  right: 525px;
+  right: 735px;
   top: 372px;
   animation: fadeIn 2s;
 }
@@ -51,7 +57,7 @@ body {
 img {
   margin: auto;
   display: block;
-  padding-top: 30px;
+  margin-top: 30px;
   border-radius: 10px;
 }
 
