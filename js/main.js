@@ -12,6 +12,7 @@ let oScore = 0;
 
 $(document).ready(function () {
 
+//defining a function where it prints the winners score to the DOM. 
   const playerWins = function () {
     if (win%2===0) {
       xScore = xScore + 1;
