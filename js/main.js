@@ -6,36 +6,74 @@ let board = [
 ]
 //counter for determining if image is going to be x or o
 let counter = 0;
+let win = 0;
+let xScore = 0;
+let oScore = 0;
 
 $(document).ready(function () {
+
+  const playerWins = function () {
+    if (win%2===0) {
+      xScore = xScore + 1;
+      $("#xScore").html(`${xScore}`);
+    }
+    if (win%2===1) {
+      oScore = oScore + 1;
+      $("#oScore").html(`${oScore}`);
+    }
+  }
   //all 8 posibilities for a winning game.
   //with it assinging the id of gameOverShow to the gameOver div and showing up.
 const isWin = function () {
   if (board[0] === board[1] && board[1] === board[2] && board[0] !== "") {
     $(".gameOver").attr('id','gameOverShow')
+    win = counter;
+    playerWins();
   }
   if (board[3] === board[4] && board[4] === board[5] && board[3] !== "") {
     $(".gameOver").attr('id','gameOverShow')
+    win = counter;
+    playerWins();
+
   }
   if (board[6] === board[7] && board[7] === board[8] && board[6] !== "") {
     $(".gameOver").attr('id','gameOverShow')
+    win = counter;
+    playerWins();
+
   }
   if (board[0] === board[3] && board[3] === board[6] && board[0] !== "") {
     $(".gameOver").attr('id','gameOverShow')
+    win = counter;
+    playerWins();
+
   }
   if (board[1] === board[4] && board[4] === board[7] && board[1] !== "") {
   $(".gameOver").attr('id','gameOverShow')
+  win = counter;
+  playerWins();
+
   }
   if (board[2] === board[5] && board[5] === board[8] && board[2] !== "") {
     $(".gameOver").attr('id','gameOverShow')
+    win = counter;
+    playerWins();
+
   }
   if (board[0] === board[4] && board[4] === board[8] && board[0] !== "") {
     $(".gameOver").attr('id','gameOverShow')
+    win = counter;
+    playerWins();
+
   }
   if (board[6] === board[4] && board[4] === board[2] && board[6] !== "") {
     $(".gameOver").attr('id','gameOverShow')
+    win = counter;
+    playerWins();
+
   }
 }
+
 
 //function to see if the game is a draw. Comparing that the board has 9 pictures in it and if it does and it hasnt been a win yet its a draw.
 const isDraw = function () {

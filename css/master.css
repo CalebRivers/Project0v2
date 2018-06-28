@@ -1,6 +1,24 @@
 .body {
   margin: auto;
   width: 950px;
+  font-family: Helvetica;
+}
+
+p {
+  display: inline-block;
+  padding-right: 30px;
+  background-color: #1d2556;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.header {
+  margin: auto;
+  text-align: center;
+  color: #f7fffb;
+  font-size: 20px;
+
 }
 
 body {
@@ -32,7 +50,7 @@ body {
   visibility: visible;
   position: absolute;
   right: 735px;
-  top: 372px;
+  top: 493px;
   animation: fadeIn 2s;
 }
 
@@ -57,8 +75,12 @@ body {
 img {
   margin: auto;
   display: block;
-  margin-top: 30px;
+  margin-top: 15px;
   border-radius: 10px;
+}
+
+img:hover {
+  box-shadow: 10px 10px grey;
 }
 
 h1 {
