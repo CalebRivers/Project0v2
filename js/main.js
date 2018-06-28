@@ -1,12 +1,15 @@
+//creating an empty array for the board
 let board = [
   '','','',
   '','','',
   '','',''
 ]
-
+//counter for determining if image is going to be x or o
 let counter = 0;
 
 $(document).ready(function () {
+  //all 8 posibilities for a winning game.
+  //with it assinging the id of gameOverShow to the gameOver div and showing up.
 const isWin = function () {
   if (board[0] === board[1] && board[1] === board[2] && board[0] !== "") {
     $(".gameOver").attr('id','gameOverShow')
@@ -34,6 +37,7 @@ const isWin = function () {
   }
 }
 
+//function to see if the game is a draw. Comparing that the board has 9 pictures in it and if it does and it hasnt been a win yet its a draw.
 const isDraw = function () {
   if ((board[0] === "X" || board[0] === "O" )&& (board[1] === "X" || board[1] === "O") && (board[2] === "X" || board[2] === "O") && (board[3] === "X" || board[3] === "O") && (board[4] === "X" || board[4] === "O") && (board[5] === "X" || board[5] === "O") && (board[6] === "X" || board[6] === "O") && (board[7] === "X" || board[7] === "O") && (board[8] === "X" || board[8] === "O")) {
     // console.log("Its a draw")
@@ -41,6 +45,8 @@ const isDraw = function () {
   }
 }
 
+//Function that swaps between placing an X and and O in the array.
+//Also calls the isWin and isDraw function from within the function itself.
 const placeMarker = function (boxNumber) {
   if (counter%2 === 0) {
     board[boxNumber] = 'X';
@@ -54,16 +60,18 @@ const placeMarker = function (boxNumber) {
   console.log(board);
 }
 
+//places the picture dependant on wether the array value is x or o.
 const placePic = function (num) {
   if (board[num]==="X") {
-    $(`#box${num}`).html('<img src= "http://placekitten.com/150/150" > ')
+    $(`#box${num}`).html('<img src= "img/x.png" > ')
   }
   if (board[num]==="O") {
-    $(`#box${num}`).html('<img src= "http://placekitten.com/151/151" > ')
+    $(`#box${num}`).html('<img src= "img/circle.png" > ')
 
   }
 }
 
+//box jQuery functions that place the marker in the arrray and pic on the div. 
   $("#box0").on('click', function () {
     placeMarker(0);
     placePic(0);
