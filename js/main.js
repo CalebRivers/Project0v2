@@ -71,7 +71,19 @@ const placePic = function (num) {
   }
 }
 
-//box jQuery functions that place the marker in the arrray and pic on the div. 
+//reset button functionality
+$("#reset").on('click', function () {
+  for (var i = 0; i < 9; i++) {
+    $(`#box${i}`).html("");
+    board[i] = "";
+  }
+  $(".draw").attr('id','');
+  $(".gameOver").attr('id','')
+
+
+})
+
+//box jQuery functions that place the marker in the arrray and pic on the div.
   $("#box0").on('click', function () {
     placeMarker(0);
     placePic(0);
