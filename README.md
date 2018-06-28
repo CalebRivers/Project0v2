@@ -1,9 +1,9 @@
-#Project 0
+# Project 0
 Here we have a game of Tic Tac Toe, simple as it may be many hours of hard work and near breakdowns were put into this lovingly made little game. This project was made for the first project week at General Assembly to put to use our HTML, CSS, Javascript, jQuery to use and stretch our abilities.
 
-[Here is the live site] (https://calebrivers.github.io/Project0v2/)
+[Here is the live site](https://calebrivers.github.io/Project0v2/)
 
-##Technology involved
+## Technology involved
 - HTML
 - CSS
 - Javascript
@@ -15,5 +15,5 @@ Here we have a game of Tic Tac Toe, simple as it may be many hours of hard work 
 - Shows when there is a draw on the screen.
 - Reset button that resets the game board allowing the game to played over and over again.
 
-##Libraries used
-jQuery - [Click here] (http://jquery.com)
+## Libraries used
+jQuery - [Click here](http://jquery.com)
