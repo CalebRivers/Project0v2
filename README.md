@@ -24,7 +24,7 @@ Here we have a game of Tic Tac Toe, simple as it may be many hours of hard work 
 ## Libraries used
 jQuery - [Click here](http://jquery.com)
 
-### Copyright
+## Copyright
 
 MIT License
 
