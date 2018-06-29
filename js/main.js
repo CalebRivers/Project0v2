@@ -12,15 +12,15 @@ let oScore = 0;
 
 $(document).ready(function () {
 
-//defining a function where it prints the winners score to the DOM. 
+//defining a function where it prints the winners score to the DOM.
   const playerWins = function () {
     if (win%2===0) {
-      xScore = xScore + 1;
-      $("#xScore").html(`${xScore}`);
-    }
-    if (win%2===1) {
       oScore = oScore + 1;
       $("#oScore").html(`${oScore}`);
+    }
+    if (win%2===1) {
+      xScore = xScore + 1;
+      $("#xScore").html(`${xScore}`);
     }
   }
   //all 8 posibilities for a winning game.
